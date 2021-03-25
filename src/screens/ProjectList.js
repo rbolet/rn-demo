@@ -20,7 +20,7 @@ export default function ProjectList() {
           </Paragraph>
           <ScrollView contentContainerStyle={{ padding: spacing(2) }}>
             {data.map((project) => (
-              <ProjectCard project={project} key={project.id} />
+              <ProjectCard project={project} key={project.id.toString()} />
             ))}
           </ScrollView>
         </>

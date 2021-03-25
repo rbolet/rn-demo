@@ -15,7 +15,6 @@ export function useProjects(method, criteria) {
   const error = false;
 
   useEffect(() => {
-    console.log("Method or criteria useEffect!");
     if (method === "GET") {
       fetch();
     } else if (method === "PATCH") {

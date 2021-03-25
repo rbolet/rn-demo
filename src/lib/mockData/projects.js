@@ -1,4 +1,4 @@
-export default jobs = [
+export default initialProjects = [
   {
     id: 1,
     client: "Sanford Health",
