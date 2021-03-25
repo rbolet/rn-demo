@@ -23,8 +23,9 @@ function styleWithTheme(theme) {
   });
 }
 
-export default function SignIn() {
-  const { setUsername } = useContext(UserContext);
+export default function SignIn({ route }) {
+  const { loginCallback } = route.params;
+  const { setUsername, setLoggedIn } = useContext(UserContext);
   const theme = useTheme();
   const styles = styleWithTheme(theme);
 
@@ -32,6 +33,7 @@ export default function SignIn() {
     if (!authReturn) return;
 
     setUsername(authReturn.username);
+    loginCallback();
   }
 
   return (

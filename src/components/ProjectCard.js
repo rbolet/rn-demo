@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View } from "react-native";
-import { Caption, Subheading, Card, useTheme } from "react-native-paper";
+import { Subheading, Card, useTheme } from "react-native-paper";
 
 export default function ProjectCard(props) {
   const { project } = props;
-  const { id, contactName, phone, client, ...rest } = project;
+  const { id, contactName, phone, client, details, imageURI, ...rest } = project;
   const navigation = useNavigation();
 
   function navigateToProject() {

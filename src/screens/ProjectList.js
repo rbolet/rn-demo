@@ -15,7 +15,7 @@ export default function ProjectList() {
         <EmptyResult isLoading={isLoading || isFetching} />
       ) : (
         <>
-          <Paragraph style={{ alignSelf: "center" }}>
+          <Paragraph style={{ alignSelf: "center", marginTop: spacing(3) }}>
             Select a card to view more details about the project
           </Paragraph>
           <ScrollView contentContainerStyle={{ padding: spacing(2) }}>
