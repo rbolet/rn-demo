@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import initialProjects from "../mockData/projects";
+import initialProjects from "./mockData/projects";
 
 async function wait(ms = 1000) {
   return new Promise((resolve) => {
@@ -24,7 +24,6 @@ export function useProjects(method, criteria) {
   }, []);
 
   useEffect(() => {
-    console.log("projects/data useEffect!");
     setIsFetching(false);
     setIsLoading(false);
   }, []);
@@ -52,7 +51,7 @@ export function useProjects(method, criteria) {
     const copy = projects;
     const i = copy.findIndex((job) => job[property] == value);
     copy[i] = { ...copy[i], [property]: value };
-    setJobs(copy);
+    setProjects(copy);
   }, []);
 
   return { isFetching, isLoading, error, data, refetch: fetch };
