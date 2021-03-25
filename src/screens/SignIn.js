@@ -25,7 +25,7 @@ function styleWithTheme(theme) {
 
 export default function SignIn({ route }) {
   const { loginCallback } = route.params;
-  const { setUsername, setLoggedIn } = useContext(UserContext);
+  const { setUsername } = useContext(UserContext);
   const theme = useTheme();
   const styles = styleWithTheme(theme);
 

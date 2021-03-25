@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import AppWrappers from "./src/components/AppWrappers";
 import SignIn from "./src/screens/SignIn";
-import { UserContext } from "./src/contexts/UserContext";
 import DashboardNavigator from "./src/navigation/DashboardNavigator";
 
 const Stack = createStackNavigator();
